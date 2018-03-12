@@ -41,6 +41,16 @@ Wonderful! Now you are training your model. To see how losses are being changed,
 ```
 and open the link appears in the terminal in your browser.
 
+Now, it's time to test your trained model. To do so, we need to export the graph corresponding to our trained model by following command (again, from *[tensorflow models]/research/* by typing):
+```
+python3 export_inference_graph.py \
+    --input_type image_tensor \
+    --pipeline_config_path training/ssd_inception_v2_coco.config  \
+    --trained_checkpoint_prefix training/model.ckpt-2563 \    
+    --output_directory YOUR_OUTPUT_PATH/YOUR_OUTPUT_NAME
+```
+
+
 
 
 ## Traffic light detection - developping  a deep net from scratch
